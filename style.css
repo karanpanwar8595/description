@@ -1,0 +1,156 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashboard-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.header h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.upload-container {
+    margin: 30px 0;
+}
+
+#imageInput {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    width: 250px;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+#uploadBtn {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color:darkgreen;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#uploadBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.image-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);  /* Gradient background */
+    position: relative;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 0.5s ease-out forwards;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: imageFadeIn 0.6s ease-out forwards;
+}
+
+.description-container {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+#description {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: 300;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes imageFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    #imageInput {
+        width: 200px;
+    }
+
+    .description-container {
+        font-size: 18px;
+    }
+}
